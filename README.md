@@ -31,7 +31,7 @@ Terminalowa aplikacja do zarządzania biblioteką napisana w Pythonie z wykorzys
 |-----------|--------|-------|
 | Python    | 3.8+   | wymagane |
 | pandas    | 1.3+   | instalacja przez pip |
-| curses    | —      | wbudowana w Pythona (Linux/macOS) |
+| curses    | -      | wbudowana w Pythona (Linux/macOS) |
 
 > **Windows:** biblioteka `curses` nie jest domyślnie dostępna. Zaleca się używanie WSL (Windows Subsystem for Linux) lub zainstalowanie pakietu `windows-curses` przez pip.
 
@@ -70,7 +70,7 @@ library-tui/
 
 ## Schemat danych
 
-### books.csv — Książki
+### books.csv - Książki
 
 | Kolumna    | Typ     | Opis                              |
 |------------|---------|-----------------------------------|
@@ -91,7 +91,7 @@ library-tui/
 | `email`       | string | adres e-mail                   |
 | `rejestracja` | date   | data rejestracji (YYYY-MM-DD)  |
 
-### loans.csv — Wypożyczenia
+### loans.csv - Wypożyczenia
 
 | Kolumna        | Typ    | Opis                                        |
 |----------------|--------|---------------------------------------------|
@@ -122,7 +122,7 @@ Zaznaczona pozycja menu oznaczona jest symbolem `>>` i wyróżniona kolorem cyja
 
 ### Książki
 
-Dostęp: Menu główne → **Książki**
+Dostęp: Menu główne >> **Książki**
 
 | Opcja | Opis |
 |-------|------|
@@ -133,7 +133,7 @@ Dostęp: Menu główne → **Książki**
 
 ### Czytelnicy
 
-Dostęp: Menu główne → **Czytelnicy**
+Dostęp: Menu główne >> **Czytelnicy**
 
 | Opcja | Opis |
 |-------|------|
@@ -142,7 +142,7 @@ Dostęp: Menu główne → **Czytelnicy**
 
 ### Wypożyczenia
 
-Dostęp: Menu główne → **Wypożyczenia**
+Dostęp: Menu główne >> **Wypożyczenia**
 
 | Opcja | Opis |
 |-------|------|
@@ -153,7 +153,7 @@ Dostęp: Menu główne → **Wypożyczenia**
 
 ### Statystyki
 
-Dostęp: Menu główne → **Statystyki**
+Dostęp: Menu główne >> **Statystyki**
 
 Wyświetla jednoekranowe podsumowanie:
 - liczba książek (ogółem / dostępnych / wypożyczonych)
@@ -193,7 +193,7 @@ Zapisuje wszystkie trzy DataFrame z powrotem do plików CSV. Wywoływana po każ
 ```python
 sadd(win, y, x, text, attr=0)
 ```
-Bezpieczny wrapper na `curses.addstr` — nie rzuca wyjątku przy próbie zapisu poza granicą okna terminala.
+Bezpieczny wrapper na `curses.addstr` - nie rzuca wyjątku przy próbie zapisu poza granicą okna terminala.
 
 ---
 
@@ -273,10 +273,10 @@ Wszystkie błędy wyświetlane są w czerwonym pasku na dole ekranu i wymagają 
 
 ## Możliwe rozszerzenia
 
-- **Usuwanie rekordów** — możliwość usunięcia książki lub wyrejestrowania czytelnika
-- **Edycja danych** — zmiana tytułu, autora, e-maila itp.
-- **Powiadomienia o przeterminowaniu** — automatyczny alert przy starcie jeśli są przeterminowane wypożyczenia
-- **Eksport raportów** — zapis statystyk do pliku tekstowego lub PDF
-- **Wyszukiwanie czytelnika** — analogiczne do wyszukiwania książek
-- **Wieloegzemplarzowość** — obsługa wielu kopii tej samej książki
-- **Baza danych SQLite** — zamiana CSV na lekką bazę danych dla większych zbiorów
+- **Usuwanie rekordów** - możliwość usunięcia książki lub wyrejestrowania czytelnika
+- **Edycja danych** - zmiana tytułu, autora, e-maila itp.
+- **Powiadomienia o przeterminowaniu** - automatyczny alert przy starcie jeśli są przeterminowane wypożyczenia
+- **Eksport raportów** - zapis statystyk do pliku tekstowego lub PDF
+- **Wyszukiwanie czytelnika** - analogiczne do wyszukiwania książek
+- **Wieloegzemplarzowość** - obsługa wielu kopii tej samej książki
+- **Baza danych SQLite** - zamiana CSV na lekką bazę danych dla większych zbiorów
