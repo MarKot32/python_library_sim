@@ -1,6 +1,6 @@
 """
-Symulator Biblioteki – TUI (curses)
-Nawigacja: strzałki ↑↓, Enter = wybór, Q/Esc = wstecz/wyjście
+Symulator Biblioteki - TUI (curses)
+Nawigacja: strzałki, Enter = wybór, Q/Esc = wstecz/wyjście
 """
 
 import curses
