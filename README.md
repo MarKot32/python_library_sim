@@ -41,7 +41,7 @@ Terminalowa aplikacja do zarządzania biblioteką napisana w Pythonie z wykorzys
 
 ```bash
 # 1. Sklonuj repozytorium lub pobierz plik
-git clone https://github.com/MarKot32/library-tui
+git clone https://github.com/MarKot32/library-tui(https://github.com/MarKot32/python_library_sim
 cd library-tui
 
 # 2. Zainstaluj zależności
