@@ -1,3 +1,11 @@
+Projekt na zaliczenie zajęć z Podstaw porgramowania w Pythonie.
+
+Autorzy:
+Marcin Kotowicz
+Dawid Dubiel
+Adrian Łupiński
+
+
 # Symulator Biblioteki
 
 Terminalowa aplikacja do zarządzania biblioteką napisana w Pythonie z wykorzystaniem bibliotek `curses` i `pandas`. Dane przechowywane są lokalnie w plikach CSV.
