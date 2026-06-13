@@ -7,7 +7,7 @@ import curses
 import pandas as pd
 import os
 from datetime import date, timedelta
-
+import time
 BOOKS_CSV   = "books.csv"
 READERS_CSV = "readers.csv"
 LOANS_CSV   = "loans.csv"
@@ -23,6 +23,15 @@ C_DIM       = 7
 
 # Dane 
 
+def mierz_czas(funkcja):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        wynik = funkcja(*args, **kwargs)
+        koniec = time.time()
+        text = open("log.txt", "a")
+        text.write(f"Funkcja '{funkcja.__name__}' wykonala sie w {koniec - start:.4f} s.")
+        return wynik
+    return wrapper
 def init_data():
     if not os.path.exists(BOOKS_CSV):
         pd.DataFrame([
@@ -50,7 +59,7 @@ def init_data():
             {"id":3,"ksiazka_id":1,"czytelnik_id":3,"data_wyp":"2025-05-01","termin":"2025-05-15","zwrot":"2025-05-14","zwrocona":True},
         ]).to_csv(LOANS_CSV, index=False)
 
-
+@mierz_czas
 def load():
     books   = pd.read_csv(BOOKS_CSV)
     readers = pd.read_csv(READERS_CSV)
