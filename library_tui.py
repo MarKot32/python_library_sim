@@ -32,6 +32,7 @@ def mierz_czas(funkcja):
         text.write(f"Funkcja '{funkcja.__name__}' wykonala sie w {koniec - start:.4f} s.")
         return wynik
     return wrapper
+
 def init_data():
     if not os.path.exists(BOOKS_CSV):
         pd.DataFrame([
