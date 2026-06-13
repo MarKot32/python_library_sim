@@ -1,8 +1,8 @@
 Projekt na zaliczenie zajęć z Podstaw porgramowania w Pythonie.
 
-Autorzy:
-Marcin Kotowicz
-Dawid Dubiel
+Autorzy:<br>
+Marcin Kotowicz<br> 
+Dawid Dubiel<br>
 Adrian Łupiński
 
 
