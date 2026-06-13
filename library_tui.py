@@ -21,7 +21,7 @@ C_BORDER    = 6
 C_DIM       = 7
 
 
-# ─── Dane ─────────────────────────────────────────────────────────────────────
+# Dane 
 
 def init_data():
     if not os.path.exists(BOOKS_CSV):
@@ -67,7 +67,7 @@ def save(books, readers, loans):
     loans.to_csv(LOANS_CSV,   index=False)
 
 
-# ─── Pomocniki TUI ────────────────────────────────────────────────────────────
+#  Pomocniki TUI
 
 def sadd(win, y, x, text, attr=0):
     h, w = win.getmaxyx()
@@ -183,7 +183,7 @@ def table(stdscr, rows, cols, title=""):
             break
 
 
-# ─── Ekrany ───────────────────────────────────────────────────────────────────
+#  Ekrany 
 
 def screen_books(stdscr, state):
     books = state[0]
@@ -434,7 +434,7 @@ def screen_stats(stdscr, state):
     stdscr.getch()
 
 
-# ─── Menu główne ──────────────────────────────────────────────────────────────
+#  Menu główne 
 
 def main_menu(stdscr, state):
     while True:
@@ -454,7 +454,7 @@ def main_menu(stdscr, state):
         elif ch in (-1, 4): break
 
 
-# ─── Entry point ──────────────────────────────────────────────────────────────
+#  Entry point 
 
 def run(stdscr):
     curses.start_color()
